@@ -1,0 +1,207 @@
+:root {
+  --main-color: #066a61;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 60px auto 50px;
+  grid-template-areas:
+    "logo logo logo logo logo logo logo logo logo logo logo logo"
+    " side side section section section section section section section section section section"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+header,
+aside,
+section,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  grid-area: logo;
+  background-color: var(--main-color);
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+aside {
+  grid-area: side;
+  background-color: #eff9f8;
+  flex-direction: column;
+  border-right: 1px solid var(--main-color);
+}
+
+aside ul {
+  list-style: none;
+  margin-top: 50px;
+  width: 100%;
+}
+
+aside ul li {
+  border-bottom: 1px solid var(--main-color);
+}
+
+aside ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 900;
+  transition: 0.4s;
+}
+
+aside ul li a:hover {
+  padding-left: 30px;
+  background-color: var(--main-color);
+  color: white;
+}
+
+section {
+  grid-area: section;
+}
+
+section .title h1 {
+  color: var(--main-color);
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+section .title p {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+section .text {
+  display: none;
+  text-align: center;
+}
+
+section .text h1 {
+  font-size: 25px;
+  line-height: 1.8;
+}
+
+section .text h1 span {
+  color: var(--main-color);
+}
+
+section .text .start {
+  display: block;
+  background-color: var(--main-color);
+  color: white;
+  width: fit-content;
+  padding: 20px;
+  font-size: 22px;
+  margin: 60px auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid var(--main-color);
+}
+
+section .text .start:hover {
+  background-color: #eff9f8;
+  color: var(--main-color);
+}
+
+section .game {
+  width: 80%;
+  display: none;
+}
+
+section .game input {
+  border: 1px solid var(--main-color);
+  padding: 20px 15px;
+  width: 100%;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+section .game input:focus {
+  outline: none;
+}
+
+section .game .word-box {
+  padding: 15px;
+  border: 1px solid var(--main-color);
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+section .game .words {
+  padding: 20px;
+  border: 1px solid var(--main-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+section .game .words .word {
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 22px;
+}
+
+section .game .calculate {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+section .game .calculate span {
+  color: var(--main-color);
+}
+
+section .msg {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+section .msg .good {
+  color: var(--main-color);
+}
+
+section .bad {
+  color: red;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--main-color);
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}

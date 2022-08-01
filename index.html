@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Test</title>
+
+    <!-- CSS main file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>Typing Speed Test</header>
+      <aside>
+        <h1>Levels</h1>
+        <ul>
+          <li><a href="#" data-level="Easy">Easy</a></li>
+          <li><a href="#" data-level="Normal">Normal</a></li>
+          <li><a href="#" data-level="Hard">Hard</a></li>
+        </ul>
+      </aside>
+      <section>
+        <div class="title">
+          <h1>Welcome To Typing Speed Test Game</h1>
+          <p>
+            You Have Three Levels, Choose The Level You Want From The Left
+            Liste. <br />
+            You Have Many Words For Each Level. <br />
+            Time And Words Differ From Level To Another.
+          </p>
+        </div>
+        <div class="text">
+          <h1>
+            Your Will Playing <span class="level"></span> Level And You Have
+            <span class="seconds"></span> Seconds To Type Each Word <br />
+            Press The Button Below To Start Playing
+          </h1>
+          <span class="start">Start Playing</span>
+        </div>
+        <div class="game">
+          <input type="text" placeholder="Enter The Word Below" />
+          <div class="word-box"></div>
+          <div class="words"></div>
+          <div class="calculate">
+            <div class="seconds-box">
+              Seconds left : <span class="time"></span>
+            </div>
+            <div class="score-box">
+              Score : <span class="score">0</span> From :
+              <span class="global-score"></span>
+            </div>
+          </div>
+        </div>
+        <div class="msg"></div>
+      </section>
+      <footer>&copy; 2022</footer>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
