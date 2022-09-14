@@ -1,5 +1,7 @@
 # Typing_Test_Speed
 
+## The design is not responsive
+
 ### Built with
 
   ### Languages : HTML, CSS and Javascript
