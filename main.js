@@ -21,7 +21,7 @@ let globalScore = document.querySelector(
 let msgDiv = document.querySelector("section .msg");
 
 // Define seconds for each level
-let lvls = {
+const lvls = {
   Easy: 6,
   Normal: 5,
   Hard: 4,
@@ -29,8 +29,9 @@ let lvls = {
 
 // Choose a level from ul liste
 levels.forEach((elt) => {
-  elt.addEventListener("click", function () {
-    level = this.dataset.level;
+  elt.addEventListener("click", function (e) {
+    // level = this.dataset.level;
+    level = e.currentTarget.dataset.level;
 
     titleDiv.style.display = "none";
     gameDiv.style.display = "none";
@@ -66,7 +67,7 @@ startbutton.onclick = function () {
 
 // Function for easy level
 function easy() {
-  let easyWords = [
+  const easyWords = [
     "PHP",
     "HTML",
     "CSS",
@@ -97,7 +98,7 @@ function easy() {
 
 // Function for normal level
 function normal() {
-  let normalWords = [
+  const normalWords = [
     "Oracle",
     "Angular",
     "Python",
@@ -126,7 +127,7 @@ function normal() {
 
 // Function for hard level
 function hard() {
-  let hardWords = [
+  const hardWords = [
     "Programming",
     "Developers",
     "Front-End",
