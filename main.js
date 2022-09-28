@@ -44,9 +44,7 @@ levels.forEach((elt) => {
 });
 
 // Disable Paste Event
-input.onpaste = function () {
-  return false;
-};
+input.onpaste = () => false;
 
 // Function to start the game
 startbutton.onclick = function () {
